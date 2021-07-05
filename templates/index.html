@@ -1,0 +1,46 @@
+{% extends 'layout/base.html' %}
+
+
+{% block css %}
+<style>
+    body{
+        background-color: rgb(1, 2, 3);
+    }
+    .alert-danger ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    #hnn{
+      font-weight: bold;
+    }
+</style>
+{% endblock css %}
+    
+{% block content %}
+
+  <div class="container">
+       <div class="row">
+           <div class="col mx-auto my-5 text-center">
+            <h1 id="hnn" style="color: red;">Home Hospital provide sevices at home</h1> 
+            <a id="hnn" style="color: white;" href="{% url 'dashboard' %}">goto more details</a>
+            
+           </div>
+       </div>
+   </div>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src=" https://source.unsplash.com/1600x900/?medical" class="d-block w-100" alt="...">
+      
+      </div>
+      <div class="carousel-item">
+        <img src= "https://source.unsplash.com/1600x900/?nurse"d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x900/?covid"d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

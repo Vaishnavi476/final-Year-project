@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cart_tag %}
+
+{% block css %}
+<style>
+    body{
+    height: 100vh;
+    background-color: rgb(36, 23, 18) !important;
+}
+</style>
+{% endblock css %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for product in products %}
+            <div class="col">
+                <div class="card">
+                    <img src="{{product.image.url}}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-title">{{product}}</div>
+                        <a href="{% url 'product_detail' product.pk %}" class="card-link">view </a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+        <h3>No product available</h3>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

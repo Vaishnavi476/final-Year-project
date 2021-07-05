@@ -1,0 +1,40 @@
+<!-- step 4 -->
+{% extends 'layout/base.html' %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                
+               <div class="container">
+                   <div class="row">
+                    {% for person in hr %}
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{person.pic.url}}">
+                            <div class="card-body">
+                            <h3 class="card-title">
+                                {{person.name}}
+                            </h3>
+                              <p class="card-text">
+                                  {{person.detail}}
+                              </p>
+                              <div class="justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <a href="{% url 'detail_hr' person.id %}" class="btn btn-sm btn-outline-secondary">View detail</a>
+                                  <a href="{% url 'sr' person.id %}" class="btn btn-sm btn-outline-secondary">Request</a>
+                                </div>
+                                <!-- <small class="text-muted">9 mins</small> -->
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    {% empty %}
+                        <h5>No data found for human resources</h5>
+                    {% endfor %}
+                   </div>
+               </div>
+                    
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,101 @@
+{% extends 'layout/base.html' %}
+
+
+
+{% block css %}
+<style>
+  body{
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v333-ning-50a-medical_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=1b7490f6fa5f0e32266120ca6b0db88d");
+  }
+</style>
+  
+{% endblock css %}
+  
+
+{% block content %}
+
+
+
+
+{% load static %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 my-4">
+      <div class="card h-60">  
+        <img src='{% static "app/eqp1.jpeg" %}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Purchase medical equipments</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'pc' %}" class="btn btn-primary">Purchase</a>
+        </div>
+      
+      </div>    </div>
+    <div class="col-md-4 my-4">
+      <div class="card h-60">
+        <img src='{% static "app/hr1img.jpeg" %}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Human Resource</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'view_hr' %}" class="btn btn-primary"> Home Services</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-md-4 my-4">
+      <div class="card h-60">
+        <img src='{% static "app/HEimg.jpeg" %}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Equipments</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'rs' %}" class="btn btn-primary">Rent Services</a>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+
+    <div class="col-md-4 my-4">
+      <div class="card h-60">
+        <img src='{% static "app/Proimg.png" %}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">User_Profile</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'up' %}" class="btn btn-primary"> User Profile</a>
+        </div>
+      </div>
+      
+  </div>
+
+  <div class="col-md-4 my-4">
+    <div class="card h-60">
+      <img src='{% static "app/fbimg.jpeg" %}' class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Report</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       
+      </div>
+      <div class="card-footer">
+        <a href="{% url 'feedback' %}" class="btn btn-primary"> feedback_report</a>
+      </div>
+    </div>
+    
+</div>
+</div>
+
+
+{% endblock content %}
+
+

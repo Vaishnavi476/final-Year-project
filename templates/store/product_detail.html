@@ -1,0 +1,24 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load cart_tag %}
+
+{% block css %}
+<style>
+    body{
+    height: 100vh;
+    background-color: coral;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+{% endblock css %}
+
+{% block content %}
+{{product}}
+<a class="btn btn-primary m-3" href="{% url 'cart_add' product.id %}">Add To Cart</a><br>
+
+<a class="btn btn-primary m-3" href="{% url 'item_increment' product.pk %}">Increament</a><br>
+<a class="btn btn-primary m-3" href="{% url 'item_decrement' product.pk %}">Decrement</a><br>
+
+{% endblock content %}

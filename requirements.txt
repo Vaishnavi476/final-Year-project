@@ -1,0 +1,5 @@
+django
+social-auth-app-django
+django-crispy-forms
+pillow
+stripe==2.50.0

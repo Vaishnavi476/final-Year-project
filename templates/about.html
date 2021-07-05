@@ -1,0 +1,50 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+
+
+
+<div class="container">
+    <div>
+        <table border="0">
+            <tr>
+                <td width="700px">
+                    <font color="#000"> Welcome to <mark>Home Hospital</mark> </font> <br> <br>
+
+                    <font color="#000" size="6px"> Best Medical & Health care Needs to Our Patients </font> <br> <br>
+
+
+
+                    Home Hospital delivers quality care with compassion. We bring world class medical care into our
+                    patients’ homes and aim to make primary healthcare not only more accessible, but also more
+                    affordable and accountable to our patients’ needs.
+
+                    <br><br>
+
+                    <br>
+                </td>
+
+
+                <td style="padding-left:50px;"> <img src="{% static 'app/aboutus.jpeg' %}" width="700px"></td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}
